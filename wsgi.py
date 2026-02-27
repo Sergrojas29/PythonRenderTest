@@ -1,4 +1,4 @@
 from app import create_app
 
-# Render's Gunicorn server looks for this 'app' object
+#For Render 
 app = create_app('production')
