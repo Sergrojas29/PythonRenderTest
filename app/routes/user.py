@@ -1,10 +1,28 @@
+from dataclasses import dataclass
+#import dataclasses
+@dataclass
+class Project:
+    project_name: str
+    start_date: str
+    end_date: str
+    #ect
+
+
+
 class User:
     def __init__(self, name: str, age: int) -> None:
         self._name = name
         self._age = age
-        
-    def get_username(self)->str:
+    
+    @property
+    def name(self)->str:
         return self._name
+    
+    @staticmethod
+    def valid_name(name: str)->bool:
+        if(isinstance(name, str)):
+            return True
+        return False
     
 #inhert class from User    
 class Admin(User):
